@@ -2,6 +2,9 @@
 
 >> REPLACE THIS TEXT WITH YOUR RESPONSE
 
+**Code**
+
+```
 resp = nsfg.ReadFemResp()
 
 import thinkplot
@@ -18,4 +21,5 @@ thinkplot.Config(xlabel='Number kids in hh', ylabel='PMF')
 
 print('Actual mean:', numkdhh_pmf.Mean())
 print('Observed mean:', biased_numkdhh_pmf.Mean())
+```
 
