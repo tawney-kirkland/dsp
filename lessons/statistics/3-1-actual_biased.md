@@ -8,18 +8,20 @@
 resp = nsfg.ReadFemResp()
 
 import thinkplot
-numkdhh18 = resp[resp.numkdhh < 18]
-hist_numkdhh = thinkstats2.Hist(numkdhh18.numkdhh,label='numkdhh')
-thinkplot.Hist(hist_numkdhh)
-thinkplot.Config(xlabel='Number kids in hh', ylabel='Count')
+numkdhh_pmf = thinkstats2.Pmf(hist_numkdhh, label='numkdhh')
 
-numkdhh_pmf = thinkstats2.Pmf(hist_numkdhh, label='actual')
-biased_numkdhh_pmf = BiasPmf(numkdhh_pmf,label='observed')
+thinkplot.Pmf(numkdhh_pmf)
+thinkplot.Config(xlabel='Number of children', ylabel='PMF')
+
+biased_numkdhh_pmf = BiasPmf(numkdhh_pmf,label='biased')
 thinkplot.PrePlot(2)
 thinkplot.Pmfs([numkdhh_pmf, biased_numkdhh_pmf])
-thinkplot.Config(xlabel='Number kids in hh', ylabel='PMF')
+thinkplot.Config(xlabel='Number children in hh', ylabel='PMF')
 
 print('Actual mean:', numkdhh_pmf.Mean())
-print('Observed mean:', biased_numkdhh_pmf.Mean())
+print('Biased mean:', biased_numkdhh_pmf.Mean())
 ```
+
+**Explanation / Interpretation**
+Surveying a sample of children from the study results in a higher average number of children in the household, as households with no children would be excluded from the sample.
 
