@@ -16,5 +16,8 @@ thinkplot.Config(xlabel='Random int',ylabel = 'CDF')
 
 ```
 
+![PMF of random sample](https://github.com/tawney-kirkland/dsp/blob/master/img/4.2.1.png?raw=true)
+![CDF of random sample](https://github.com/tawney-kirkland/dsp/blob/master/img/4.2.2.png?raw=true)
+
 **Explanation / Interpretation**
 Yes, the distribution is uniform. Noise appears in the PMF as the number of values increases because the associated probabilities become smaller. The CDF manages for this by using percentiles.
