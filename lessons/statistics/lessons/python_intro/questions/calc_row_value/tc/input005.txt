@@ -1,3 +1,0 @@
-### Testcase
-import inspect
-print("enumerate" in inspect.getsource(calc_row_value))

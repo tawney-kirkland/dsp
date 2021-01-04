@@ -1,3 +1,0 @@
-### TESTCASE SAMPLE
-# returns false if no docstring is provided
-print(bool(find_first_names.__doc__))
